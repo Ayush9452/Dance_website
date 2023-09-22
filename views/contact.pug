@@ -1,0 +1,30 @@
+doctype html
+html
+    head 
+        style
+            include ../static/style.css 
+            include ../static/contact.css 
+    body 
+        nav#navbar.top.first 
+            ul 
+                img(src="http://localhost/img/logo.png", alt="" class="logo")
+                h1 DfD
+                li #[a(href ="/") Home]
+                li #[a(href ="/") About]
+                li #[a(href ="/") Services]
+                li #[a(href ="/") Class Info]
+                li #[a(href ="/contact") Contact US]
+
+
+        form(action="/contact", method="post" class = "myform") 
+            h1 Contact Us
+            input(type="text" class ="MyInput" name = "name" placeholder="Enter your name")
+            input(type="text" class ="MyInput" name = "phone" placeholder="Enter your phone number")
+            input(type="text" class ="MyInput" name = "email" placeholder="Enter your email id")
+            input(type="text" class ="MyInput" name = "address" placeholder="Enter your address")
+            input(type="text" class ="MyInput" name = "concern" placeholder="Enter your concern")
+            button(class = "btn")
+                | Submit
+
+        script 
+            include ../static/index.js
